@@ -4,23 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tokoton02
+namespace tokoton2_4
 {
-    class A
+    static class Sample
     {
-        internal A()
-        {
-            throw new ApplicationException("クラスAはnewできません。");
-        }
-
+        internal static int A;
     }
-    
-    
+
     class Program
     {
         static void Main(string[] args)
         {
-            new A();
+            Sample.A = 123;
+
+            Console.WriteLine(Sample.A);
+
+            Console.ReadLine();
         }
     }
 }

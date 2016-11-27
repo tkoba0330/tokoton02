@@ -4,22 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tokoton02
+namespace tokoton2_2
 {
     class A
     {
-        internal A()
+        private A()
         {
-            throw new ApplicationException("クラスAはnewできません。");
-        }
 
+        }
     }
-    
-    
+
+
     class Program
     {
         static void Main(string[] args)
         {
+            // ------------
+            // コンパイルエラー"アクセスできない保護レベル担っています。"が発生します。
+            // ------------
             new A();
         }
     }
